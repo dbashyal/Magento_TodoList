@@ -10,5 +10,5 @@ Keep track of your to do list and never loose them on loose paper :)
 
 TODO:
  - auto generate common tasks that need to be done on every single magento projects
- - to do status array use status code as key, instead of int
+ - <s>to do status array use status code as key, instead of int</s>
  - ... add your own and request a pull.
