@@ -36,9 +36,9 @@ $table = $installer->getConnection()
     ->addColumn('todos_description', Varien_Db_Ddl_Table::TYPE_TEXT, null, array(
         'nullable'  => false,
         ), 'Todo Description')
-    ->addColumn('todos_status', Varien_Db_Ddl_Table::TYPE_INTEGER, 1, array(
+    ->addColumn('todos_status', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array(
           'nullable'    => false,
-          'default'     => 2,
+          'default'     => 'todo',
           ), 'Todo Status')
     ->setComment('Todos');
 $installer->getConnection()->createTable($table);
@@ -47,7 +47,7 @@ $installer->endSetup();
 // insert default todo
 $installer->getConnection()->insertForce($installer->getTable('todos'), array(
     'todos_id'           => 1,
-    'todos_status'       => 0,
+    'todos_status'       => 'done',
     'todos_title'        => 'Create School Manager',
     'todos_description'  => 'Create school manager with functionality to associate it to school group',
 ));

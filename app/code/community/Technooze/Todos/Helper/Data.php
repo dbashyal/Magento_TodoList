@@ -19,12 +19,12 @@ class Technooze_Todos_Helper_Data extends Mage_Core_Helper_Abstract
 {
     public function getToDoStatuses(){
         return array(
-            0 => Mage::helper('todos')->__('Done'),
-            1 => Mage::helper('todos')->__('In progress'),
-            2 => Mage::helper('todos')->__('To Do'),
-            3 => Mage::helper('todos')->__('Waiting for client\'s Feedback'),
-            4 => Mage::helper('todos')->__('With QA'),
-            5 => Mage::helper('todos')->__('Deprecated'),
+            'todo'          => Mage::helper('todos')->__('To Do'),
+            'done'          => Mage::helper('todos')->__('Done'),
+            'in_progress'   => Mage::helper('todos')->__('In progress'),
+            'with_client'   => Mage::helper('todos')->__('Waiting for client\'s Feedback'),
+            'with_qa'       => Mage::helper('todos')->__('With QA'),
+            'deprecated'    => Mage::helper('todos')->__('Deprecated'),
         );
     }
 }
